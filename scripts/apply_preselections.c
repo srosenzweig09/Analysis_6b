@@ -18,13 +18,13 @@ int apply_preselections(){
 
   int nmin_presel = 6;
 
-  TFile *fout = new TFile("signal/skimmed/NMSSM_XYH_YToHH_6b_MX_700_MY_400_testing_set_skimmed.root","RECREATE");
+  TFile *fout = new TFile("signal/skimmed/NMSSM_XYH_YToHH_6b_MX_700_MY_400_training_set_skimmed.root","RECREATE");
   TTree *t1   = new TTree("sixBtree","sixBtree");
 
   TString tree = "sixBtree";
   TChain *cc  = new TChain(tree);
 
-  TString file1 = "signal/NanoAOD/NMSSM_XYH_YToHH_6b_MX_700_MY_400_testing_set.root";
+  TString file1 = "~/nobackup/workarea/higgs/sixb_analysis/CMSSW_10_2_18/src/sixB/analysis/sixBanalysis/NMSSM_XYH_YToHH_6b_MX_700_MY_400_training_set.root";
   
   cc->Add(file1);
 
